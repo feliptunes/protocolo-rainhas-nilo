@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo das Rainhas do Nilo™ - A Descoberta Arqueológica que Está Revolucionando a Vida de Milhares de Mães</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-royal: #D4AF37;
+            --blue-nile: #2B4C7E;
+            --bronze-feminine: #C19A6B;
+            --earth-sacred: #8B4513;
+            --papyrus-light: #F4F1E8;
+            --hieroglyph: #2F2F2F;
+            --white: #FFFFFF;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            background-color: var(--papyrus-light);
+            color: var(--hieroglyph);
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Mobile-first responsive container */
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Hero Section - Mobile First */
+        .hero {
+            background: linear-gradient(135deg, var(--blue-nile) 0%, #1a365d 100%);
+            color: var(--white);
+            padding: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Padrão decorativo inline para evitar dependências externas */
+            background-image: 
+                linear-gradient(45deg, rgba(212, 175, 55, 0.1) 25%, transparent 25%), 
+                linear-gradient(-45deg, rgba(212, 175, 55, 0.1) 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, rgba(212, 175, 55, 0.1) 75%), 
+                linear-gradient(-45deg, transparent 75%, rgba(212, 175, 55, 0.1) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--gold-royal);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        @media (min-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 480px) {
+            .hero-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.4rem;
+                margin-bottom: 30px;
+                padding: 0;
+            }
+        }
+
+        .video-container {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            max-width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .video-container {
+                border-radius: 20px;
+                padding: 20px;
+                margin: 30px auto;
+                max-width: 800px;
+            }
+        }
+
+        .video-placeholder {
+            background: #000;
+            /* Fallback para aspect-ratio */
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            position: relative;
+            border-radius: 10px;
+            color: var(--white);
+            font-size: 0.9rem;
+            background-image: linear-gradient(45deg, #333 25%, transparent 25%), 
+                            linear-gradient(-45deg, #333 25%, transparent 25%), 
+                            linear-gradient(45deg, transparent 75%, #333 75%), 
+                            linear-gradient(-45deg, transparent 75%, #333 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        
+        .video-placeholder::before {
+            content: '[ESPAÇO PARA VÍDEO - Aspecto 16:9]\A Insira aqui o código embed do seu vídeo';
+            white-space: pre-line;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            font-size: 0.9rem;
+        }
+        
+        /* Fallback para browsers sem transform */
+        @supports not (transform: translate(-50%, -50%)) {
+            .video-placeholder::before {
+                top: 40%;
+                left: 5%;
+                width: 90%;
+                transform: none;
+            }
+        }
+        
+        /* Suporte moderno para aspect-ratio */
+        @supports (aspect-ratio: 16/9) {
+            .video-placeholder {
+                aspect-ratio: 16/9;
+                height: auto;
+                padding-bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+            }
+            
+            .video-placeholder::before {
+                content: none;
+            }
+            
+            .video-placeholder span {
+                display: block !important;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .video-placeholder {
+                border-radius: 15px;
+                font-size: 1.2rem;
+            }
+            
+            .video-placeholder::before {
+                font-size: 1.2rem;
+            }
+            
+            /* Suporte moderno para aspect-ratio em tablets */
+            @supports (aspect-ratio: 16/9) {
+                .video-placeholder span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        /* Section Styles - Mobile First */
+        section {
+            padding: 40px 0;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        .section-white {
+            background-color: var(--white);
+        }
+
+        .section-light {
+            background-color: var(--papyrus-light);
+        }
+
+        .section-dark {
+            background-color: var(--blue-nile);
+            color: var(--white);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--blue-nile);
+            padding: 0 10px;
+        }
+
+        @media (min-width: 480px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.8rem;
+                margin-bottom: 40px;
+                padding: 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        .section-dark .section-title {
+            color: var(--gold-royal);
+        }
+
+        /* Opening Story - Mobile First */
+        .opening-story {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.7;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .opening-story {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                padding: 0;
+            }
+        }
+
+        .opening-story p {
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .opening-story p {
+                margin-bottom: 20px;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, var(--gold-royal) 0%, var(--gold-royal) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 30%;
+            background-position: 0 85%;
+            padding: 2px 0;
+            font-weight: 600;
+        }
+
+        /* Key Concept - Mobile First */
+        .key-concept {
+            background: linear-gradient(135deg, var(--gold-royal) 0%, var(--bronze-feminine) 100%);
+            color: var(--white);
+            padding: 30px 20px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 90%;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .key-concept {
+                padding: 50px 30px;
+                border-radius: 20px;
+                margin: 40px auto;
+                max-width: 900px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+        }
+
+        .key-concept h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 480px) {
+            .key-concept h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .key-concept h3 {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* False Solutions - Mobile First */
+        .false-solutions {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .false-solutions {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 40px;
+            }
+        }
+
+        .false-solution {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #e74c3c;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .false-solution {
+                padding: 30px;
+            }
+        }
+
+        .false-solution h4 {
+            color: #e74c3c;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        @media (min-width: 768px) {
+            .false-solution h4 {
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* CTA Buttons - Mobile First */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-royal) 0%, #b8941f 100%);
+            color: var(--white);
+            padding: 18px 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        @media (min-width: 480px) {
+            .cta-button {
+                padding: 20px 35px;
+                font-size: 1.1rem;
+                border-radius: 40px;
+                width: auto;
+                letter-spacing: 1px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .cta-button {
+                padding: 20px 40px;
+                font-size: 1.2rem;
+                border-radius: 50px;
+            }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        @media (min-width: 768px) {
+            .cta-section {
+                margin: 40px 0;
+            }
+        }
+
+        /* Testimonials - Mobile First */
+        .testimonials {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 40px;
+            }
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--gold-royal);
+        }
+
+        @media (min-width: 768px) {
+            .testimonial {
+                padding: 30px;
+            }
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-text {
+                margin-bottom: 20px;
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--blue-nile);
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-author {
+                font-size: 1rem;
+            }
+        }
+
+        /* Sales Bullets - Mobile First */
+        .sales-bullets {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .sales-bullets {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 20px;
+                margin-top: 40px;
+            }
+        }
+
+        .bullet-item {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold-royal);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 768px) {
+            .bullet-item {
+                padding: 20px;
+                font-size: 1rem;
+            }
+        }
+
+        .bullet-item::before {
+            content: "✦";
+            color: var(--gold-royal);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .bullet-item::before {
+                margin-right: 10px;
+            }
+        }
+
+        /* Offer Section Premium - Mobile First */
+        .offer-section-premium {
+            background: var(--white);
+            padding: 50px 0;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .offer-section-premium {
+                padding: 80px 0;
+            }
+        }
+
+        .offer-section-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--papyrus-light) 0%, var(--white) 50%, var(--papyrus-light) 100%);
+            opacity: 0.7;
+        }
+
+        .offer-container {
+            position: relative;
+            z-index: 2;
+            max-width: 95%;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border: 2px solid var(--gold-royal);
+        }
+
+        @media (min-width: 768px) {
+            .offer-container {
+                max-width: 900px;
+                border-radius: 25px;
+                padding: 40px;
+                border: 3px solid var(--gold-royal);
+                box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .offer-container {
+                padding: 50px;
+            }
+        }
+
+        .offer-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--papyrus-light);
+        }
+
+        @media (min-width: 768px) {
+            .offer-header {
+                margin-bottom: 40px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .offer-header h2 {
+            color: var(--blue-nile);
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        @media (min-width: 480px) {
+            .offer-header h2 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .offer-header h2 {
+                font-size: 2.4rem;
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .offer-header h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        .offer-header .subtitle {
+            color: var(--earth-sacred);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .offer-header .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        .offer-modules {
+            margin: 30px 0;
+        }
+
+        @media (min-width: 768px) {
+            .offer-modules {
+                margin: 40px 0;
+            }
+        }
+
+        .module-item {
+            background: linear-gradient(135deg, var(--papyrus-light) 0%, #f8f6f0 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 4px solid var(--gold-royal);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+        }
+
+        @media (min-width: 768px) {
+            .module-item {
+                padding: 25px;
+                border-radius: 15px;
+                margin: 20px 0;
+                border-left: 5px solid var(--gold-royal);
+            }
+        }
+
+        .module-item h4 {
+            color: var(--blue-nile);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        @media (min-width: 768px) {
+            .module-item h4 {
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+        }
+
+        .module-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .module-item li {
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+            color: var(--hieroglyph);
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 768px) {
+            .module-item li {
+                margin-bottom: 8px;
+                padding-left: 20px;
+                font-size: 1rem;
+            }
+        }
+
+        .module-item li::before {
+            content: '✓';
+            color: var(--gold-royal);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .value-stack {
+            background: linear-gradient(135deg, var(--gold-royal) 0%, var(--bronze-feminine) 100%);
+            color: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .value-stack {
+                padding: 30px;
+                border-radius: 15px;
+                margin: 40px 0;
+            }
+        }
+
+        .value-stack h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .value-stack h3 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+        }
+
+        .pricing-premium {
+            text-align: center;
+            margin: 30px 0;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, var(--papyrus-light) 0%, var(--white) 100%);
+            border-radius: 15px;
+            border: 2px solid var(--gold-royal);
+        }
+
+        @media (min-width: 768px) {
+            .pricing-premium {
+                margin: 40px 0;
+                padding: 40px 30px;
+                border-radius: 20px;
+            }
+        }
+
+        .pricing-header {
+            margin-bottom: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-header {
+                margin-bottom: 30px;
+            }
+        }
+
+        .pricing-header h3 {
+            color: var(--blue-nile);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-header h3 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+        }
+
+        .price-comparison {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 768px) {
+            .price-comparison {
+                gap: 20px;
+                margin: 25px 0;
+            }
+        }
+
+        .old-price-premium {
+            font-size: 1.3rem;
+            text-decoration: line-through;
+            color: #999;
+            font-weight: 400;
+        }
+
+        @media (min-width: 768px) {
+            .old-price-premium {
+                font-size: 1.8rem;
+            }
+        }
+
+        .arrow-down {
+            color: var(--gold-royal);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        @media (min-width: 768px) {
+            .arrow-down {
+                font-size: 2rem;
+            }
+        }
+
+        .new-price-premium {
+            font-size: 2.5rem;
+            color: var(--gold-royal);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .new-price-premium {
+                font-size: 3.5rem;
+            }
+        }
+
+        .installments-premium {
+            font-size: 1.1rem;
+            color: var(--earth-sacred);
+            margin: 12px 0;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .installments-premium {
+                font-size: 1.3rem;
+                margin: 15px 0;
+            }
+        }
+
+        .economy-highlight {
+            background: var(--gold-royal);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 15px 0;
+            display: inline-block;
+        }
+
+        @media (min-width: 768px) {
+            .economy-highlight {
+                padding: 15px 25px;
+                border-radius: 25px;
+                font-size: 1.1rem;
+                margin: 20px 0;
+            }
+        }
+
+        .cta-premium {
+            margin-top: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .cta-premium {
+                margin-top: 30px;
+            }
+        }
+
+        .cta-button-premium {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-royal) 0%, #b8941f 100%);
+            color: var(--white);
+            padding: 20px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        @media (min-width: 480px) {
+            .cta-button-premium {
+                width: auto;
+                padding: 22px 40px;
+                font-size: 1.2rem;
+                border-radius: 40px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .cta-button-premium {
+                padding: 25px 50px;
+                font-size: 1.3rem;
+                border-radius: 50px;
+                letter-spacing: 1px;
+            }
+        }
+
+        .cta-button-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button-premium:hover::before {
+            left: 100%;
+        }
+
+        .cta-button-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+        }
+
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 768px) {
+            .security-badges {
+                gap: 30px;
+                margin-top: 30px;
+            }
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--earth-sacred);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .security-badge {
+                gap: 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        .guarantee-mini {
+            background: var(--papyrus-light);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid var(--bronze-feminine);
+        }
+
+        @media (min-width: 768px) {
+            .guarantee-mini {
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 25px;
+            }
+        }
+
+        .guarantee-mini h4 {
+            color: var(--blue-nile);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .guarantee-mini h4 {
+                margin-bottom: 10px;
+                font-size: 1.1rem;
+            }
+        }
+
+        .guarantee-mini p {
+            color: var(--earth-sacred);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        @media (min-width: 768px) {
+            .guarantee-mini p {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Bonuses - Mobile First */
+        .bonuses {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .bonuses {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 40px;
+            }
+        }
+
+        .bonus-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 2px solid var(--gold-royal);
+        }
+
+        @media (min-width: 768px) {
+            .bonus-item {
+                padding: 30px;
+            }
+        }
+
+        .bonus-value {
+            background: var(--gold-royal);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        @media (min-width: 768px) {
+            .bonus-value {
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Guarantee - Mobile First */
+        .guarantee {
+            background: linear-gradient(135deg, var(--gold-royal) 0%, var(--bronze-feminine) 100%);
+            color: var(--white);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 95%;
+        }
+
+        @media (min-width: 768px) {
+            .guarantee {
+                padding: 40px;
+                border-radius: 20px;
+                margin: 40px auto;
+                max-width: 800px;
+            }
+        }
+
+        /* Scarcity - Mobile First */
+        .scarcity {
+            background: #e74c3c;
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            margin: 15px 0;
+            border-radius: 8px;
+            animation: pulse 2s infinite;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .scarcity {
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 10px;
+                font-size: 1rem;
+            }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+
+        /* Warning Box - Mobile First */
+        .warning-box {
+            background: rgba(231, 76, 60, 0.1);
+            border: 2px solid #e74c3c;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        @media (min-width: 768px) {
+            .warning-box {
+                border-radius: 15px;
+                padding: 25px;
+                margin: 30px 0;
+            }
+        }
+
+        .warning-box h4 {
+            color: #e74c3c;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        @media (min-width: 768px) {
+            .warning-box h4 {
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-royal), transparent);
+            margin: 30px auto;
+            max-width: 150px;
+        }
+
+        @media (min-width: 768px) {
+            .divider {
+                margin: 40px auto;
+                max-width: 200px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Touch improvements for mobile */
+        @media (max-width: 767px) {
+            /* Larger touch targets */
+            button, .cta-button, .cta-button-premium, a[href] {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            
+            /* Better spacing for fingers */
+            .module-item li {
+                padding: 8px 18px 8px 18px;
+                margin-bottom: 8px;
+            }
+            
+            /* Prevent zoom on input focus */
+            input, select, textarea {
+                font-size: 16px;
+            }
+            
+            /* Better text readability */
+            body {
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+            }
+            
+            /* Remove hover effects on touch devices */
+            .cta-button:hover,
+            .cta-button-premium:hover {
+                transform: none;
+            }
+            
+            /* Better spacing for mobile reading */
+            .opening-story p {
+                margin-bottom: 18px;
+                line-height: 1.8;
+            }
+            
+            /* Improve button spacing */
+            .cta-section {
+                padding: 0 10px;
+            }
+            
+            /* Better video container on mobile */
+            .video-container {
+                margin: 15px 10px;
+            }
+            
+            /* Improve readability for long text blocks */
+            .testimonial-text {
+                line-height: 1.7;
+            }
+            
+            /* Better spacing for guarantee text */
+            .guarantee p {
+                line-height: 1.7;
+                margin-bottom: 15px;
+            }
+            
+            /* Improve module item readability */
+            .module-item h4 {
+                line-height: 1.4;
+            }
+            
+            /* Better price display on mobile */
+            .price-comparison {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .new-price-premium {
+                font-size: 2.8rem;
+            }
+            
+            /* Optimize security badges for mobile */
+            .security-badges {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .security-badge {
+                justify-content: center;
+            }
+        }
+        
+        /* Touch device optimizations */
+        .touch-device .cta-button:hover,
+        .touch-device .cta-button-premium:hover {
+            transform: none;
+        }
+        
+        .touch-device .cta-button:active,
+        .touch-device .cta-button-premium:active {
+            transform: scale(0.98);
+            transition: transform 0.1s ease;
+        }
+
+        /* Fallback para transform e animações */
+        @supports not (transform: translateY(-2px)) {
+            .cta-button:hover,
+            .cta-button-premium:hover {
+                margin-top: -2px;
+                transition: margin-top 0.3s ease;
+            }
+        }
+        
+        /* Fallback para animações */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+        
+        /* Garantir compatibilidade com Internet Explorer */
+        .price-comparison {
+            display: -ms-flexbox; /* IE10 */
+            display: -webkit-flex; /* Safari */
+            display: flex;
+        }
+        
+        .security-badges {
+            display: -ms-flexbox; /* IE10 */
+            display: -webkit-flex; /* Safari */
+            display: flex;
+        }
+
+        /* Extra small screens */
+        @media (max-width: 360px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .new-price-premium {
+                font-size: 2.5rem;
+            }
+            
+            .offer-container {
+                padding: 20px;
+            }
+            
+            .module-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Me Dê 2 Minutos Durante a Soneca do Seu Bebê e Te Devolvo o Corpo Que Seu Marido se Apaixonou</h1>
+                <p class="hero-subtitle">O segredo milenar das Rainhas do Egito para manter corpos de deusa mesmo após gerarem herdeiros ao trono</p>
+                
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <!-- Para navegadores com suporte ao aspect-ratio -->
+                        <span style="display: none;">
+                            [ESPAÇO PARA VÍDEO - Aspecto 16:9]<br>
+                            Insira aqui o código embed do seu vídeo
+                        </span>
+                    </div>
+                    <div class="cta-section" style="margin-top: 25px;">
+                        <a href="#offer-section" class="cta-button" style="font-size: 1.1rem; padding: 18px 35px;">QUERO RECUPERAR MEU CORPO AGORA →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Story -->
+    <section class="section-white">
+        <div class="container">
+            <div class="opening-story">
+                <p>Marina acordou às 5h30 da manhã com Arthur chorando, como todos os dias nos últimos 8 meses.</p>
+                <p>Mas desta vez, algo era diferente.</p>
+                <p>Quando se olhou no espelho do banheiro enquanto preparava a mamadeira, pela primeira vez em quase um ano, ela sorriu para o próprio reflexo.</p>
+                <p><span class="highlight">A calça jeans preta que estava pendurada no armário como um troféu impossível há 8 meses... finalmente vestiu.</span></p>
+                <p>O marido Daniel, que há meses evitava intimidade inventando desculpas de cansaço, voltou a beliscá-la na cintura quando ela passou pela cozinha.</p>
+                <p>E quando postou uma foto de corpo inteiro no Instagram pela primeira vez desde o parto, recebeu 247 curtidas e 89 comentários de amigas perguntando: <em>"Marina, que milagre foi esse? Qual seu segredo?"</em></p>
+                <p>O segredo de Marina não foi academia de R$ 300 por mês que ela nunca conseguia frequentar.</p>
+                <p>Não foi personal trainer de R$ 200 por sessão que não entendia nada sobre pós-parto.</p>
+                <p>Não foi dieta restritiva que secava o leite e deixava Arthur irritado.</p>
+                <p><span class="highlight">O segredo de Marina foi uma descoberta arqueológica feita no Vale das Rainhas, no Egito, que permaneceu oculta por mais de 3.000 anos... até agora.</span></p>
+                <p>Uma descoberta que explica cientificamente por que algumas mulheres conseguem manter corpos de deusa mesmo após gerarem filhos, enquanto outras lutam desesperadamente contra cada quilo extra.</p>
+                <p>E se eu te disser que você pode ter os mesmos resultados que Marina em apenas 2 minutos por dia, durante a soneca do seu bebê, sem sair de casa, sem dieta maluca e sem prejudicar nem uma gota do seu leite materno?</p>
+                <p>Você provavelmente pensaria: <em>"Impossível. Se fosse assim tão simples, todas as mães saberiam."</em></p>
+                <p>E você estaria certa em ser cética.</p>
+                <p>Porque durante milênios, esse conhecimento foi um segredo guardado exclusivamente pela elite real egípcia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Concept -->
+    <section class="section-light">
+        <div class="container">
+            <div class="key-concept">
+                <h3>O Protocolo das Rainhas do Nilo™</h3>
+                <p><strong>O primeiro sistema de restauração corporal pós-parto baseado em técnicas descobertas em papiros médicos do Antigo Egito, especificamente desenvolvido para rainhas que precisavam manter seus corpos divinos mesmo após gerarem herdeiros ao trono.</strong></p>
+            </div>
+            
+            <div class="opening-story">
+                <p>Cleópatra teve 4 filhos. Nefertiti teve 6 filhas.</p>
+                <p>Como essas soberanas mantinham corpos que seduziam imperadores e conquistavam nações, mesmo após múltiplas gestações?</p>
+                <p>A resposta estava escondida em hieróglifos que a ciência moderna só conseguiu decifrar completamente em 2019, quando pesquisadores da Universidade de Harvard descobriram algo revolucionário sobre a biologia feminina pós-parto.</p>
+                <p><span class="highlight">Existe uma "janela hormonal" de exatos 2 minutos que acontece naturalmente no corpo de toda mãe entre 5h30 e 7h00 da manhã, onde três glândulas específicas trabalham em perfeita sinergia, criando um "cocktail" natural de queima de gordura que é 23 vezes mais potente que qualquer exercício convencional.</span></p>
+                <p>As rainhas egípcias descobriram essa janela e desenvolveram uma sequência proprietária de 7 micro-movimentos - baseados na "Dança da Restauração de Ísis" - que ativa o que os cientistas hoje chamam de <strong>"Fator Ankh™"</strong>.</p>
+                <p>O Fator Ankh™ é a ativação simultânea da Glândula Pineal (que libera melatonina residual potencializadora), da Glândula Pituitária (que produz hormônio do crescimento reparador) e das Glândulas Adrenais (que convertem cortisol materno em energia pura).</p>
+                <p>Essa combinação milenar, validada por estudos modernos, é a única que trabalha especificamente COM a biologia única do corpo pós-parto, respeitando os ciclos hormonais da amamentação enquanto restaura a silhueta real que toda mãe merece manter.</p>
+                <p>É por isso que Marina conseguiu em 90 dias o que 8 meses de tentativas anteriores não entregaram.</p>
+                <p><strong>E é por isso que você também pode.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- False Solutions -->
+    <section class="section-white">
+        <div class="container">
+            <h2 class="section-title">As 5 Armadilhas Mortais que Estão Sabotando Seus Esforços</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 40px;">Mas antes de revelar exatamente como funciona o Protocolo das Rainhas do Nilo™, preciso alertá-la sobre as armadilhas que estão sabotando seus esforços para voltar ao corpo pré-gravidez:</p>
+            
+            <div class="false-solutions">
+                <div class="false-solution">
+                    <h4>ARMADILHA #1: A Academia das Ilusões</h4>
+                    <p>Você paga R$ 300 por mês achando que vai conseguir ir 4 vezes por semana. A realidade? Vai 2 vezes no primeiro mês, 1 vez no segundo, e no terceiro está pagando para não ir. Por que? Porque academia tradicional ignora completamente que seu corpo pós-parto tem limitações e horários específicos que a indústria fitness finge que não existem.</p>
+                </div>
+                
+                <div class="false-solution">
+                    <h4>ARMADILHA #2: O Personal Trainer Despreparado</h4>
+                    <p>R$ 200 por sessão para um profissional que não sabe nem o que é diástase abdominal e manda você fazer burpee como se você fosse uma universitária de 20 anos. Resultado? Lesões, frustração e dinheiro jogado fora.</p>
+                </div>
+                
+                <div class="false-solution">
+                    <h4>ARMADILHA #3: A Dieta da Privação</h4>
+                    <p>Jejum intermitente, dieta da proteína, corte de carboidrato... Todas essas "soluções" ignoram um fato científico: seu corpo está produzindo leite materno e precisa de nutrientes específicos. Quando você corta calorias drasticamente, seu metabolismo entra em "modo sobrevivência" e você para de emagrecer completamente.</p>
+                </div>
+                
+                <div class="false-solution">
+                    <h4>ARMADILHA #4: Os Shakes Milagrosos</h4>
+                    <p>R$ 250 por mês em pó mágico que promete queimar gordura enquanto você dorme. A realidade? São diuréticos caros que te fazem perder água, não gordura. E quando para de tomar, volta tudo (e às vezes mais).</p>
+                </div>
+                
+                <div class="false-solution">
+                    <h4>ARMADILHA #5: A Mentalidade do "Mais é Melhor"</h4>
+                    <p>Achar que precisa treinar 1 hora por dia para ter resultado. Essa é a maior mentira da indústria do fitness. A ciência já provou que exercícios longos esgotam suas glândulas ANTES da sinergia hormonal acontecer. É como tentar acender uma fogueira jogando água: quanto mais você faz, pior fica.</p>
+                </div>
+            </div>
+            
+            <div class="opening-story" style="margin-top: 40px;">
+                <p>A verdade inconveniente é que a indústria do emagrecimento fatura R$ 15 bilhões por ano no Brasil vendendo métodos que não foram desenvolvidos para a realidade de uma mãe moderna.</p>
+                <p><strong>Você não precisa de mais tempo. Você não precisa de mais disciplina. Você não precisa de mais força de vontade.</strong></p>
+                <p><span class="highlight">Você precisa do método CERTO.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objections -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">Sei Exatamente o que Está Passando pela Sua Cabeça Agora</h2>
+            
+            <div class="opening-story">
+                <p><strong>"2 minutos não pode funcionar. Se fosse assim tão simples..."</strong></p>
+                <p>Entendo sua resistência. Você já foi enganada antes. Já acreditou em promessas que não se cumpriram. Mas pense comigo: quantas vezes você tentou treinar 1 hora e desistiu? O problema nunca foi a duração ser "pouca". O problema é que você estava usando métodos errados no horário errado.</p>
+                
+                <p><strong>"Vou acordar o Arthur com certeza."</strong></p>
+                <p>Os 7 micro-movimentos do Protocolo são mais silenciosos que você andando na ponta do pé. Foram desenvolvidos pelas rainhas para serem executados nos palácios sem acordar ninguém. Marina faz há 3 meses e Arthur nunca acordou durante o exercício.</p>
+                
+                <p><strong>"Já gastei tanto dinheiro que não posso gastar mais."</strong></p>
+                <p>Exatamente por isso você PRECISA tentar algo diferente. Qual é o custo real de continuar do jeito que está? Qual o preço de acordar daqui a 5 anos e perceber que perdeu os melhores anos da sua vida se escondendo atrás de roupas largas?</p>
+                
+                <p><strong>"E se afetar minha produção de leite?"</strong></p>
+                <p>Este é meu compromisso mais sagrado com você: o Protocolo das Rainhas do Nilo™ é aprovado por pediatras e ginecologistas. Não só não afeta a amamentação como MELHORA a qualidade do leite materno, porque você fica menos estressada e mais energizada.</p>
+                
+                <p><strong>"Meu corpo nunca mais vai ser o mesmo."</strong></p>
+                <p>Essa é a maior mentira que contaram para você. Seu corpo tem uma capacidade natural de regeneração que as rainhas conheciam e a ciência moderna confirmou. A diferença é que você precisa ativar essa capacidade do jeito certo, na hora certa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Offer -->
+    <section class="offer-section-premium" id="offer-section">
+        <div class="container">
+            <div class="offer-container">
+                <div class="offer-header">
+                    <h2>O Protocolo das Rainhas do Nilo™</h2>
+                    <p class="subtitle">O único sistema no mundo que ativa o Fator Ankh™ para restauração corporal pós-parto em apenas 2 minutos diários.</p>
+                </div>
+                
+                <div class="offer-modules">
+                    <div class="module-item">
+                        <h4>✨ MÓDULO PRINCIPAL: A Sequência Secreta das 7 Dança de Ísis</h4>
+                        <ul>
+                            <li>Video-aulas em alta definição mostrando cada micro-movimento</li>
+                            <li>Versão silenciosa para fazer durante a soneca do bebê</li>
+                            <li>Progressão gradual respeitando suas limitações pós-parto</li>
+                            <li>Adaptações para cesárea, diástase e outras condições específicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="module-item">
+                        <h4>✨ BÔNUS EXCLUSIVO #1: 15 Receitas Rápidas das Rainhas</h4>
+                        <ul>
+                            <li>Cardápio específico que potencializa o Fator Ankh™</li>
+                            <li>Receitas de 5 minutos que se fazem sozinhas</li>
+                            <li>Ingredientes que aumentam produção e qualidade do leite</li>
+                            <li>Lista de compras organizada por semana</li>
+                        </ul>
+                        <div style="text-align: right; color: var(--gold-royal); font-weight: 600; margin-top: 10px;">Valor: R$ 197</div>
+                    </div>
+                    
+                    <div class="module-item">
+                        <h4>✨ BÔNUS EXCLUSIVO #2: Plano de Refeições Pós-Sono</h4>
+                        <ul>
+                            <li>Alimentação estratégica para mães privadas de sono</li>
+                            <li>Como comer para ter energia mesmo dormindo 4 horas por noite</li>
+                            <li>Lanches que controlam ansiedade sem engordar</li>
+                            <li>Protocolo de hidratação que acelera resultados</li>
+                        </ul>
+                        <div style="text-align: right; color: var(--gold-royal); font-weight: 600; margin-top: 10px;">Valor: R$ 147</div>
+                    </div>
+                    
+                    <div class="module-item">
+                        <h4>✨ BÔNUS EXCLUSIVO #3: Guia de Autocuidado Real</h4>
+                        <ul>
+                            <li>Rotinas de 30 segundos que fazem você se sentir deusa</li>
+                            <li>Truques de maquiagem para disfarçar olheiras em 2 minutos</li>
+                            <li>Como se vestir para parecer 5kg mais magra instantaneamente</li>
+                            <li>Ritual de autoestima que transforma seu dia</li>
+                        </ul>
+                        <div style="text-align: right; color: var(--gold-royal); font-weight: 600; margin-top: 10px;">Valor: R$ 127</div>
+                    </div>
+                </div>
+                
+                <div class="value-stack">
+                    <h3>VALOR TOTAL SE COMPRADO SEPARADAMENTE:</h3>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-top: 10px;">R$ 797</div>
+                </div>
+
+                <div class="scarcity" style="margin: 30px 0;">
+                    <strong>⚠️ ÚLTIMAS 18 VAGAS DISPONÍVEIS</strong> (atualizado às 14:47h)
+                </div>
+                
+                <div class="pricing-premium">
+                    <div class="pricing-header">
+                        <h3>Mas porque sei que você já gastou dinheiro com métodos que não funcionaram...</h3>
+                        <p style="color: var(--earth-sacred); font-size: 1.1rem;">Decidiu fazer um investimento que cabe no seu orçamento:</p>
+                    </div>
+                    
+                    <div class="price-comparison">
+                        <span class="old-price-premium">De R$ 797</span>
+                        <span class="arrow-down">↓</span>
+                        <span style="color: var(--earth-sacred); font-size: 1.3rem; font-weight: 600;">por apenas</span>
+                    </div>
+                    
+                    <div class="new-price-premium">R$ 197</div>
+                    <div class="installments-premium">Ou em 12x de R$ 19,90 no cartão</div>
+                    
+                    <div class="economy-highlight">
+                        ECONOMIA DE R$ 600 (75% OFF)
+                    </div>
+                    
+                    <div style="margin: 25px 0; color: var(--earth-sacred); font-size: 1.1rem;">
+                        <strong>Menos que uma consulta com nutricionista.<br>
+                        Menos que uma semana de academia.<br>
+                        Menos que um jantar para duas pessoas.</strong>
+                    </div>
+
+                    <div class="cta-premium">
+                        <a href="#" class="cta-button-premium">QUERO MINHA TRANSFORMAÇÃO AGORA →</a>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: var(--earth-sacred);">*(Acesso imediato após confirmação do pagamento)*</p>
+                    </div>
+
+                    <div class="security-badges">
+                        <div class="security-badge">
+                            <span>🔒</span> Compra 100% Segura
+                        </div>
+                        <div class="security-badge">
+                            <span>⚡</span> Acesso Instantâneo
+                        </div>
+                        <div class="security-badge">
+                            <span>📱</span> Funciona em Qualquer Dispositivo
+                        </div>
+                    </div>
+
+                    <div class="guarantee-mini">
+                        <h4>🛡️ GARANTIA INCONDICIONAL DE 60 DIAS</h4>
+                        <p><strong>Resultados ou seu dinheiro de volta!</strong> Se não perder pelo menos 5kg e 8cm de cintura, devolvemos 100% do investimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-white">
+        <div class="container">
+            <h2 class="section-title">O Que Nossas Rainhas Estão Dizendo</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-text">"Gente, eu não acreditava que 2 minutos podiam mudar minha vida assim. Sono estou há 4 meses fazendo o Protocolo e já perdi 11kg. Meu marido não para de me elogiar e eu me sinto a mulher mais confiante do mundo. Obrigada por me devolver a Marina que eu era!"</div>
+                    <div class="testimonial-author">- Marina Santos, 29 anos, São Paulo</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"Tentei TUDO! Personal trainer, academia, nutricionista... gastei mais de R$ 3.000 e nada funcionava. Com o Protocolo das Rainhas em 90 dias eu consegui o que 2 anos de tentativas não entregaram. Estou cabendo nas roupas de antes da gravidez!"</div>
+                    <div class="testimonial-author">- Fernanda Lima, 32 anos, Alphaville</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"O que mais me impressionou foi como minha energia mudou. Antes eu estava sempre exausta, agora corro atrás da Sophia no parque sem cansar. E o Daniel... bem, digamos que nossa lua de mel voltou! 😍"</div>
+                    <div class="testimonial-author">- Carla Mendes, 28 anos, Vila Madalena</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-text">"Sou médica e confesso que era cética. Mas a fundamentação científica me convenceu a testar. Os resultados são inegáveis: -9kg, -14cm de cintura e exames de sangue perfeitos. Agora recomendo para todas as minhas pacientes."</div>
+                    <div class="testimonial-author">- Dra. Patricia Oliveira, 35 anos, Ginecologista</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sales Bullets -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="section-title">DESCUBRA:</h2>
+            
+            <div class="sales-bullets">
+                <div class="bullet-item">Como ativar o "Gene da Restauração Materna" que 99% das mães não sabem que possuem</div>
+                <div class="bullet-item">O horário exato que transforma seu corpo em uma máquina natural de queimar gordura</div>
+                <div class="bullet-item">Por que exercícios longos IMPEDEM o emagrecimento pós-parto (a explicação científica vai te chocar)</div>
+                <div class="bullet-item">A respiração secreta que elimina a "barriga de avental" em 21 dias</div>
+                <div class="bullet-item">Como reduzir 3-5cm de cintura na primeira semana (método validado por ginecologistas)</div>
+                <div class="bullet-item">O movimento de 15 segundos que realinha sua postura e te faz parecer 5kg mais magra instantaneamente</div>
+                <div class="bullet-item">Por que 2 minutos às 6h da manhã valem mais que 1 hora às 20h (estudos de Harvard)</div>
+                <div class="bullet-item">Como fortalecer o assoalho pélvico sem constrangimento ou equipamentos caros</div>
+                <div class="bullet-item">A técnica milenar que elimina flacidez sem cirurgia plástica</div>
+                <div class="bullet-item">O protocolo nutricional que acelera resultados sem afetar nem uma gota do leite materno</div>
+                <div class="bullet-item">Como recuperar a libido e confiança para transar de luz acesa novamente</div>
+                <div class="bullet-item">O segredo para ter energia de leoa mesmo dormindo apenas 5 horas por noite</div>
+                <div class="bullet-item">Por que dietas restritivas sabotam o emagrecimento pós-parto (e o que fazer no lugar)</div>
+                <div class="bullet-item">Como transformar ansiedade materna em combustível para queimar gordura</div>
+                <div class="bullet-item">A fórmula exata para eliminar 70% da celulite em 60 dias</div>
+                <div class="bullet-item">O truque das rainhas para manter resultados para sempre sem esforço extra</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Bonuses -->
+    <section class="section-white">
+        <div class="container">
+            <h2 class="section-title">Bônus Ultra-Secretos Exclusivos</h2>
+            
+            <div class="bonuses">
+                <div class="bonus-item">
+                    <div class="bonus-value">Valor: R$ 247</div>
+                    <h4>🎁 BÔNUS ULTRA-SECRETO #4: Sistema de Redução de Estrias Rainhas</h4>
+                    <p>Rotina diária de 5 minutos com técnicas baseadas em óleos sagrados egípcios que regeneram a pele de dentro para fora. Inclui receitas de máscaras caseiras que custam R$ 5 e funcionam melhor que tratamentos de R$ 500.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <div class="bonus-value">Valor: R$ 147</div>
+                    <h4>🎁 BÔNUS ULTRA-SECRETO #5: Kit Equipamentos Bebê-Friendly</h4>
+                    <p>Lista completa de equipamentos que você pode usar com segurança mesmo com bebê por perto, onde comprar com desconto e como transformar objetos da sua casa em academia particular.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <div class="bonus-value">Valor: R$ 397</div>
+                    <h4>🎁 BÔNUS ULTRA-SECRETO #6: Acelerador de Resultados - Queima Pós-Parto Turbo</h4>
+                    <p>Protocolo intensivo para quem quer resultados ainda mais rápidos. Plano de 6 semanas que pode ser usado após dominar a sequência básica, com progressões avançadas da realeza egípcia.</p>
+                </div>
+                
+                <div class="bonus-item">
+                    <div class="bonus-value">Valor: R$ 597</div>
+                    <h4>🎁 BÔNUS ULTRA-SECRETO #7: Manutenção da Rainha - Programa Vitalício</h4>
+                    <p>Sistema completo para manter resultados para sempre, adaptar o protocolo conforme você envelhece e técnicas para ensinar suas filhas quando crescerem.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 1.3rem; color: var(--gold-royal); font-weight: 700;">VALOR TOTAL DOS BÔNUS: R$ 1.388</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="section-light">
+        <div class="container">
+            <div class="guarantee">
+                <h3 style="margin-bottom: 20px;">GARANTIA INCONDICIONAL DE 60 DIAS - DETALHADA</h3>
+                <h4 style="margin-bottom: 20px;">"RESULTADOS OU SEU DINHEIRO DE VOLTA"</h4>
+                
+                <p>Estou tão confiante de que o Protocolo das Rainhas do Nilo™ vai transformar sua vida que ofereço uma garantia que nenhuma academia ou personal trainer seria maluco de dar:</p>
+                
+                <p style="font-size: 1.2rem; margin: 20px 0;"><strong>Use o protocolo por 60 dias completos. Se não perder pelo menos 5kg e 8cm de cintura, eu devolvo 100% do seu investimento, sem perguntas, sem burocracia.</strong></p>
+                
+                <p>Mais que isso: se não se sentir mais confiante, mais energizada e mais feminina, também devolvo seu dinheiro.</p>
+                
+                <p>E você ainda pode ficar com todos os bônus como minha forma de pedir desculpas pelo seu tempo.</p>
+                
+                <p style="font-size: 1.1rem; margin-top: 20px;"><strong>Essa é minha garantia pessoal para você.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="section-light">
+        <div class="container">
+            <div class="warning-box" style="background: rgba(231, 76, 60, 0.1); border-color: #e74c3c; margin: 30px auto; max-width: 800px;">
+                <h4>⚠️ AVISO URGENTE DE DISPONIBILIDADE:</h4>
+                <p>Por questões técnicas da nossa plataforma de vídeo, posso disponibilizar o Protocolo das Rainhas do Nilo™ para apenas <strong>73 novas alunas</strong> nesta semana.</p>
+                <p>Quando atingirmos esse número, o acesso será fechado até o próximo mês.</p>
+                <p style="text-align: center; margin-top: 20px;"><strong>Próxima turma apenas em 30 dias.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final PS Section -->
+    <section class="section-white">
+        <div class="container">
+            <div class="opening-story" style="text-align: center;">
+                <p><strong>P.S.:</strong> Lembra da Marina que abriu esta carta? Ela hesitou por 3 dias antes de começar. Depois me disse: "Se eu soubesse que era tão simples, teria começado no primeiro dia." Não cometa o erro de hesitar quando sua transformação está a um clique de distância.</p>
+                
+                <p><strong>P.P.S.:</strong> As rainhas do Egito não tinham instagram, não tinham influencers, não tinham personal trainers. Mas tinham corpos de deusa porque conheciam os segredos que estou entregando para você hoje. A pergunta é: você vai usar esse conhecimento ou vai deixar passar mais uma oportunidade de se transformar?</p>
+                
+                <div class="cta-section">
+                    <a href="#offer-section" class="cta-button">SIM, QUERO MINHA TRANSFORMAÇÃO →</a>
+                    <p style="margin-top: 15px; font-style: italic; color: var(--earth-sacred);">
+                        *Restam apenas 18 vagas. Após esgotar, próxima turma apenas em 30 dias.*
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* ========================================
+           PROTOCOLO DAS RAINHAS DO NILO™
+           JavaScript 100% Cross-Browser Compatible
+           Mobile-Optimized & No External Dependencies
+           ======================================== */
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Garantir que o código funcione mesmo se algum elemento não existir
+            try {
+                // Simple animation on scroll
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -30px 0px'
+                };
+
+                // Verifica se IntersectionObserver é suportado
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('fade-in');
+                            }
+                        });
+                    }, observerOptions);
+
+                    // Observe all major sections
+                    const elementsToObserve = document.querySelectorAll('section, .testimonial, .bonus-item, .false-solution');
+                    if (elementsToObserve.length > 0) {
+                        elementsToObserve.forEach(el => {
+                            observer.observe(el);
+                        });
+                    }
+                } else {
+                    // Fallback para navegadores que não suportam IntersectionObserver
+                    const elementsToAnimate = document.querySelectorAll('section, .testimonial, .bonus-item, .false-solution');
+                    if (elementsToAnimate.length > 0) {
+                        elementsToAnimate.forEach(el => {
+                            el.classList.add('fade-in');
+                        });
+                    }
+                }
+
+                // Smooth scroll for anchor links
+                const anchorLinks = document.querySelectorAll('a[href^="#"]');
+                if (anchorLinks.length > 0) {
+                    anchorLinks.forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const targetId = this.getAttribute('href');
+                            const target = document.querySelector(targetId);
+                            if (target) {
+                                target.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        });
+                    });
+                }
+
+                // Mobile touch optimizations
+                if ('ontouchstart' in window) {
+                    document.body.classList.add('touch-device');
+                }
+
+                // Prevent zoom on double tap for buttons
+                let lastTouchEnd = 0;
+                document.addEventListener('touchend', function (event) {
+                    const now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+
+                // Fallback para scroll suave em navegadores antigos
+                if (typeof CSS !== 'undefined' && !CSS.supports('scroll-behavior', 'smooth')) {
+                    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+                    if (smoothScrollLinks.length > 0) {
+                        smoothScrollLinks.forEach(anchor => {
+                            anchor.addEventListener('click', function (e) {
+                                e.preventDefault();
+                                const targetId = this.getAttribute('href');
+                                const target = document.querySelector(targetId);
+                                if (target) {
+                                    const targetPosition = target.offsetTop;
+                                    window.scrollTo({
+                                        top: targetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            });
+                        });
+                    }
+                }
+                
+            } catch (error) {
+                // Fallback silencioso se algo der errado
+                console.log('Inicialização com fallback básico');
+            }
+        });
+    </script>
+</body>
+</html>
